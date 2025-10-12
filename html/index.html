@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuyoneBD Ecom</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+</head>
+
+<body>
+
+
+    <!-- header -->
+    <header class="header_section py-2">
+        <div class="navbar-area">
+            <div class="ecom-nav">
+                <div class="container">
+                    <nav
+                        class="navbar navbar-expand-md p-0 navbar-light d-flex justify-content-between position-relative">
+
+                        <button class="mdiv navbar-toggler border-0 shadow-none d-md-none border-0" type="button"
+                            data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu"
+                            style="width: 20%;" aria-label="Toggle navigation">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" data-lucide="align-right" class="lucide lucide-align-right">
+                                <path d="M21 5H3"></path>
+                                <path d="M21 12H9"></path>
+                                <path d="M21 19H7"></path>
+                            </svg>
+                        </button>
+
+                        <a class="mdiv navbar-brand p-0 m-0 justify-content-center mr-2" href="index.html">
+                            <img src="assets/images/logo.png" alt="logo">
+                        </a>
+
+                        <!-- Offcanvas menu: visible on mobile -->
+                        <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu"
+                            aria-labelledby="mobileMenuLabel">
+                            <div class="offcanvas-header bg-light border-bottom">
+                                <div class="d-flex align-items-center justify-content-between w-100">
+                                    <h5 class="offcanvas-title" id="mobileMenuLabel">
+                                        <img src="assets/images/logo.png" alt="logo">
+                                    </h5>
+                                    <button type="button" class="bg-transparent text-reset border-0 shadow-none"
+                                        data-bs-dismiss="offcanvas" aria-label="Close">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" data-lucide="x"
+                                            class="lucide lucide-x">
+                                            <path d="M18 6 6 18"></path>
+                                            <path d="m6 6 12 12"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="offcanvas-body p-0">
+                                <ul class="navbar-nav ms-lg-4">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            <i class="pe-1 fa fa-thumbs-up"></i>
+                                            Best-Selling Items
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            <i class="pe-1 fa fa-star"></i>
+                                            5-Star Rated
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">New In</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Categories</a>
+                                    </li>
+                                </ul>
+                                <div class="search_option ms-3">
+                                    <form action="#" method="get">
+                                        <div class="input-group">
+                                            <input type="text" name="search" id="search" class="form-control"
+                                                placeholder="Search..." required>
+                                            <button type="submit" class="btn btn-dark input-group-text">
+                                                <i class="fa fa-search"></i>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Cart & Wishlist icons always visible, even on mobile -->
+                        <div class="mdiv others-option d-flex align-items-center ms-md-auto">
+                            <div class="dropdown user_dropdown me-4">
+                                <button class="bg-transparent border-0 d-flex align-items-center" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <img src="assets/images/logo.png" width="30" height="30" class="rounded-pill me-1"
+                                        alt="">
+                                    <div class="text-start">
+                                        Hello, John Doe <br>
+                                        <strong>Orders & Account</strong>
+                                    </div>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#"><i class="fa fa-list"></i> Your Orders</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa fa-user"></i> Your Profile</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa fa-signout"></i> Sign Out</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="option-item ">
+                                <div class="cart-btn position-relative">
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#shoppingCartModal">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-shopping-cart-icon lucide-shopping-cart">
+                                            <circle cx="8" cy="21" r="1" />
+                                            <circle cx="19" cy="21" r="1" />
+                                            <path
+                                                d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+                                        </svg>
+                                        <span class="cart-count">1</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header -->
+
+    <!-- banner -->
+    <div class="banner_img mb-4">
+        <img src="assets/images/banner.jpg" class="img-fluid" alt="">
+    </div>
+    <!-- banner -->
+
+    <!-- Lighting Deals -->
+    <div class="lighting_deals_sec mb-5">
+        <div class="container">
+            <div class="section-title mb-3">
+                <h3>
+                    <svg class="_3tsZFq31" alt="" aria-label="" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                        viewBox="0 0 1024 1024" width="1em" height="1em" aria-hidden="true" fill="#FB7701">
+                        <path
+                            d="M346.9 64l317.5 0c17.7 0 32 14.3 32 32 0 4.4-0.9 8.8-2.7 12.8l-115.4 264.3 0 0 217.2 0c17.7 0 32 14.3 32 32 0 8.2-3.1 16-8.7 22l-475.2 504.6c-12.1 12.9-32.4 13.5-45.2 1.4-8.6-8.1-12-20.2-9-31.6l84.1-315.3 0 0-199.2 0c-17.7 0-32-14.3-32-32 0-3.9 0.7-7.7 2-11.3l172.7-458.2c4.7-12.5 16.6-20.7 29.9-20.7z">
+                        </path>
+                    </svg>
+                    LIGHTNING DEALS
+                </h3>
+            </div>
+            <div class="row gy-4 row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6">
+                <div class="col">
+                    <div class="product_card position-relative">
+                        <div class="product_img overflow-hidden mb-2">
+                            <a href="#" class="stretched-link">
+                                <img src="assets/images/products/1.jpg" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="produt_content">
+                            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing....</h2>
+                            <h4 class="m-0">TK 361 <del>388</del></h4>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <span>4</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="product_card position-relative">
+                        <div class="product_img overflow-hidden mb-2">
+                            <a href="#" class="stretched-link">
+                                <img src="assets/images/products/2.jpg" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="produt_content">
+                            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing....</h2>
+                            <h4 class="m-0">TK 361 <del>388</del></h4>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <span>5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="product_card position-relative">
+                        <div class="product_img overflow-hidden mb-2">
+                            <a href="#" class="stretched-link">
+                                <img src="assets/images/products/3.jpg" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="produt_content">
+                            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing....</h2>
+                            <h4 class="m-0">TK 361 <del>388</del></h4>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <span>4</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="product_card position-relative">
+                        <div class="product_img overflow-hidden mb-2">
+                            <a href="#" class="stretched-link">
+                                <img src="assets/images/products/4.jpg" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="produt_content">
+                            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing....</h2>
+                            <h4 class="m-0">TK 361 <del>388</del></h4>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <span>5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="product_card position-relative">
+                        <div class="product_img overflow-hidden mb-2">
+                            <a href="#" class="stretched-link">
+                                <img src="assets/images/products/5.jpg" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="produt_content">
+                            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing....</h2>
+                            <h4 class="m-0">TK 361 <del>388</del></h4>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <span>5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="product_card position-relative">
+                        <div class="product_img overflow-hidden mb-2">
+                            <a href="#" class="stretched-link">
+                                <img src="assets/images/products/6.jpg" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="produt_content">
+                            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing....</h2>
+                            <h4 class="m-0">TK 361 <del>388</del></h4>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <span>5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Lighting Deals -->
+
+    <!-- categories -->
+    <div class="categories_sec mb-1">
+        <div class="container">
+            <!-- Swiper -->
+            <div class="swiper categorySwiper">
+                <div class="swiper-wrapper py-4">
+                    <!-- 10 category items -->
+                    <div class="swiper-slide category_item">
+                        <a href="#" class="category">Home & Kitchen</a>
+                    </div>
+                    <div class="swiper-slide category_item">
+                        <a href="#" class="category">Electronics</a>
+                    </div>
+                    <div class="swiper-slide category_item">
+                        <a href="#" class="category">Fashion</a>
+                    </div>
+                    <div class="swiper-slide category_item">
+                        <a href="#" class="category">Beauty</a>
+                    </div>
+                    <div class="swiper-slide category_item">
+                        <a href="#" class="category">Sports</a>
+                    </div>
+                    <div class="swiper-slide category_item">
+                        <a href="#" class="category">Toys</a>
+                    </div>
+                    <div class="swiper-slide category_item">
+                        <a href="#" class="category">Books</a>
+                    </div>
+                    <div class="swiper-slide category_item">
+                        <a href="#" class="category">Groceries</a>
+                    </div>
+                    <div class="swiper-slide category_item">
+                        <a href="#" class="category">Automotive</a>
+                    </div>
+                    <div class="swiper-slide category_item">
+                        <a href="#" class="category">Pets</a>
+                    </div>
+                    <div class="swiper-slide category_item">
+                        <a href="#" class="category">Toys</a>
+                    </div>
+                    <div class="swiper-slide category_item">
+                        <a href="#" class="category">Books</a>
+                    </div>
+                    <div class="swiper-slide category_item">
+                        <a href="#" class="category">Groceries</a>
+                    </div>
+                    <div class="swiper-slide category_item">
+                        <a href="#" class="category">Automotive</a>
+                    </div>
+                    <div class="swiper-slide category_item">
+                        <a href="#" class="category">Pets</a>
+                    </div>
+                </div>
+
+                <!-- Arrows -->
+                <div class="category_swiper_nav">
+                    <div class="swiper-button-next">
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class="fa fa-angle-left"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- categories -->
+
+    <!-- products -->
+    <div class="product_section mb-5">
+        <div class="container">
+            <div class="row gy-4 row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+                <div class="col">
+                    <div class="product_card product_shadow p-2 position-relative">
+                        <div class="product_img overflow-hidden mb-2">
+                            <a href="#" class="stretched-link">
+                                <img src="assets/images/products/1.jpg" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="produt_content">
+                            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing....</h2>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h4 class="m-0">TK 361 <del>388</del></h4>
+                                <div class="cart">
+                                    <button type="button" class="cart-btn">
+                                        <i class="fa-solid fa-cart-plus"></i>gi
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <span>4</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="product_card product_shadow p-2 position-relative">
+                        <div class="product_img overflow-hidden mb-2">
+                            <a href="#" class="stretched-link">
+                                <img src="assets/images/products/2.jpg" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="produt_content">
+                            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing....</h2>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h4 class="m-0">TK 361 <del>388</del></h4>
+                                <div class="cart">
+                                    <button type="button" class="cart-btn">
+                                        <i class="fa-solid fa-cart-plus"></i>gi
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <span>5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="product_card product_shadow p-2 position-relative">
+                        <div class="product_img overflow-hidden mb-2">
+                            <a href="#" class="stretched-link">
+                                <img src="assets/images/products/3.jpg" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="produt_content">
+                            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing....</h2>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h4 class="m-0">TK 361 <del>388</del></h4>
+                                <div class="cart">
+                                    <button type="button" class="cart-btn">
+                                        <i class="fa-solid fa-cart-plus"></i>gi
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <span>4</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="product_card product_shadow p-2 position-relative">
+                        <div class="product_img overflow-hidden mb-2">
+                            <a href="#" class="stretched-link">
+                                <img src="assets/images/products/4.jpg" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="produt_content">
+                            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing....</h2>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h4 class="m-0">TK 361 <del>388</del></h4>
+                                <div class="cart">
+                                    <button type="button" class="cart-btn">
+                                        <i class="fa-solid fa-cart-plus"></i>gi
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <span>5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="product_card product_shadow p-2 position-relative">
+                        <div class="product_img overflow-hidden mb-2">
+                            <a href="#" class="stretched-link">
+                                <img src="assets/images/products/5.jpg" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="produt_content">
+                            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing....</h2>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h4 class="m-0">TK 361 <del>388</del></h4>
+                                <div class="cart">
+                                    <button type="button" class="cart-btn">
+                                        <i class="fa-solid fa-cart-plus"></i>gi
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <span>5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="product_card product_shadow p-2 position-relative">
+                        <div class="product_img overflow-hidden mb-2">
+                            <a href="#" class="stretched-link">
+                                <img src="assets/images/products/6.jpg" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="produt_content">
+                            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing....</h2>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h4 class="m-0">TK 361 <del>388</del></h4>
+                                <div class="cart">
+                                    <button type="button" class="cart-btn">
+                                        <i class="fa-solid fa-cart-plus"></i>gi
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <span>5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="product_card product_shadow p-2 position-relative">
+                        <div class="product_img overflow-hidden mb-2">
+                            <a href="#" class="stretched-link">
+                                <img src="assets/images/products/3.jpg" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="produt_content">
+                            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing....</h2>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h4 class="m-0">TK 361 <del>388</del></h4>
+                                <div class="cart">
+                                    <button type="button" class="cart-btn">
+                                        <i class="fa-solid fa-cart-plus"></i>gi
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <span>4</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="product_card product_shadow p-2 position-relative">
+                        <div class="product_img overflow-hidden mb-2">
+                            <a href="#" class="stretched-link">
+                                <img src="assets/images/products/4.jpg" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="produt_content">
+                            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing....</h2>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h4 class="m-0">TK 361 <del>388</del></h4>
+                                <div class="cart">
+                                    <button type="button" class="cart-btn">
+                                        <i class="fa-solid fa-cart-plus"></i>gi
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <span>5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="product_card product_shadow p-2 position-relative">
+                        <div class="product_img overflow-hidden mb-2">
+                            <a href="#" class="stretched-link">
+                                <img src="assets/images/products/5.jpg" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="produt_content">
+                            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing....</h2>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h4 class="m-0">TK 361 <del>388</del></h4>
+                                <div class="cart">
+                                    <button type="button" class="cart-btn">
+                                        <i class="fa-solid fa-cart-plus"></i>gi
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <span>5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="product_card product_shadow p-2 position-relative">
+                        <div class="product_img overflow-hidden mb-2">
+                            <a href="#" class="stretched-link">
+                                <img src="assets/images/products/6.jpg" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="produt_content">
+                            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing....</h2>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h4 class="m-0">TK 361 <del>388</del></h4>
+                                <div class="cart">
+                                    <button type="button" class="cart-btn">
+                                        <i class="fa-solid fa-cart-plus"></i>gi
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <span>5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="product_card product_shadow p-2 position-relative">
+                        <div class="product_img overflow-hidden mb-2">
+                            <a href="#" class="stretched-link">
+                                <img src="assets/images/products/3.jpg" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="produt_content">
+                            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing....</h2>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h4 class="m-0">TK 361 <del>388</del></h4>
+                                <div class="cart">
+                                    <button type="button" class="cart-btn">
+                                        <i class="fa-solid fa-cart-plus"></i>gi
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <span>4</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="product_card product_shadow p-2 position-relative">
+                        <div class="product_img overflow-hidden mb-2">
+                            <a href="#" class="stretched-link">
+                                <img src="assets/images/products/4.jpg" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="produt_content">
+                            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing....</h2>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h4 class="m-0">TK 361 <del>388</del></h4>
+                                <div class="cart">
+                                    <button type="button" class="cart-btn">
+                                        <i class="fa-solid fa-cart-plus"></i>gi
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <span>5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="product_card product_shadow p-2 position-relative">
+                        <div class="product_img overflow-hidden mb-2">
+                            <a href="#" class="stretched-link">
+                                <img src="assets/images/products/5.jpg" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="produt_content">
+                            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing....</h2>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h4 class="m-0">TK 361 <del>388</del></h4>
+                                <div class="cart">
+                                    <button type="button" class="cart-btn">
+                                        <i class="fa-solid fa-cart-plus"></i>gi
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <span>5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="product_card product_shadow p-2 position-relative">
+                        <div class="product_img overflow-hidden mb-2">
+                            <a href="#" class="stretched-link">
+                                <img src="assets/images/products/6.jpg" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="produt_content">
+                            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing....</h2>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h4 class="m-0">TK 361 <del>388</del></h4>
+                                <div class="cart">
+                                    <button type="button" class="cart-btn">
+                                        <i class="fa-solid fa-cart-plus"></i>gi
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <span>5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="product_card product_shadow p-2 position-relative">
+                        <div class="product_img overflow-hidden mb-2">
+                            <a href="#" class="stretched-link">
+                                <img src="assets/images/products/6.jpg" class="img-fluid" alt="">
+                            </a>
+                        </div>
+                        <div class="produt_content">
+                            <h2>Lorem ipsum, dolor sit amet consectetur adipisicing....</h2>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <h4 class="m-0">TK 361 <del>388</del></h4>
+                                <div class="cart">
+                                    <button type="button" class="cart-btn">
+                                        <i class="fa-solid fa-cart-plus"></i>gi
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <span>5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="text-center mt-5">
+                <button class="load_more_btn">Load More <i class="fa fa-angle-down"></i></button>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- products -->
+
+
+
+
+
+
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".categorySwiper", {
+            slidesPerView: 10,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                0: { slidesPerView: 2 },
+                500: { slidesPerView: 3 },
+                640: { slidesPerView: 3 },
+                768: { slidesPerView: 5 },
+                1024: { slidesPerView: 8 },
+                1400: { slidesPerView: 10 },
+            },
+        });
+    </script>
+
+</body>
+
+</html>
