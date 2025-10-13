@@ -584,8 +584,13 @@ div#rateYo {
 }
 
 .products-details-desc .pro_price del {
-    color: #999;
+    color: var(--primary);
     margin-right: 5px;
+}
+
+.review-stars i {
+    font-size: 10px;
+    color: orange;
 }
 
 .products-details-desc .pro_price span {
@@ -664,17 +669,4 @@ div#rateYo {
     cursor: pointer;
     color: var(--primary);
     background-color: #ffffff17;
-}
-
-
-.products-add-to-cart .qty_option {
-    width: 120px;
-    margin: initial !important;
-    border-radius: 5px;
-    height: 48px;
-}
-
-.products-add-to-cart .input-group-quantity {
-    line-height: 24px;
-    top: -3px;
 }
