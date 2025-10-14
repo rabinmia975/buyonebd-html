@@ -758,3 +758,18 @@ div#rateYo {
 .dropdown-item:hover {
     color: var(--primary) !important;
 }
+
+.login_form {
+    max-width: 28rem;
+    margin: auto;
+    border: 1px solid #EEE;
+}
+
+.login_form h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: 'Lato', sans-serif;
+    color: var(--bg-dark);
+}
+
