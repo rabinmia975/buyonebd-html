@@ -34,4 +34,15 @@
     .section-title h3 {
         font-size: 18px !important;
     }
+
+    .search_option {
+        position: absolute;
+        top: 57px;
+        left: 0;
+        right: 0;
+    }
+
+    .header_section {
+        padding: 15px 0px 60px 0px !important;
+    }
 }
