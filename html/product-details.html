@@ -17,6 +17,28 @@
 
 <body>
 
+    <!-- header top -->
+    <div class="header-top d-none d-lg-block">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" version="1.1"
+                        viewBox="0 0 1024 1024" width="1em" height="1em" fill="currentColor" color="#ADFFA2"
+                        class="me-2" aria-hidden="true">
+                        <path
+                            d="M675 167.4c44.9 0 81.6 35 84.4 79.2l0.2 5.4 0 58.1 136.4 56.5c29.7 12.3 49.7 40.4 52 72.1l0.2 6 0 224.9c0 44.9-35 81.6-79.2 84.4l-5.4 0.2-7.1 0c-8.2 56-53.2 99.7-108.8 99.7-55.6 0-100.6-43.7-108.8-99.7l-213.6 0c-8.2 56-53.2 99.7-108.8 99.7-55.6 0-100.6-43.7-108.8-99.7l-6.9 0c-44.9 0-81.6-35-84.4-79.2l-0.2-5.4 0-77.1c0-17.7 14.3-32 32-32 16.4 0 29.9 12.4 31.8 28.2l0.2 3.8 0 77.1c0 10.3 7.6 18.9 17.5 20.4l3.1 0.2 494.8 0 0-438.2c0-10.3-7.6-18.9-17.6-20.4l-3-0.2-474.2 0c-10.3 0-18.9 7.6-20.4 17.5l-0.2 3.1 0 78.8 161.2 0c16.4 0 29.9 12.4 31.7 28.3l0.3 3.7c0 16.4-12.4 29.9-28.3 31.8l-3.7 0.2-193.2 0c-16.4 0-29.9-12.4-31.8-28.3l-0.2-3.7 0-110.8c0-44.9 35-81.6 79.2-84.4l5.4-0.2 474.2 0z m-315.1 586.8l-86.8 0c6.5 21.1 23.9 35.7 43.4 35.7 19.4 0 36.8-14.6 43.4-35.7z m431.2 0l-86.8 0c6.5 21.1 23.9 35.7 43.4 35.7 19.4 0 36.8-14.6 43.4-35.7z m-31.5-374.9l0 310.9 104 0c9.2 0 17-6 19.6-14.3l0.8-3.2 0.2-3.1 0-224.9c0-7.3-3.8-13.9-9.9-17.6l-2.8-1.4-111.9-46.4z m-563.4 68.4c17.7 0 32 14.3 32 32 0 17.7-14.3 32-32 32l-115.4 0c-17.7 0-32-14.3-32-32 0-17.7 14.3-32 32-32l115.4 0z">
+                        </path>
+                    </svg>
+                    <span>Free Shipping <i class="fa fa-angle-right"></i> <br> Special for you</span>
+                </div>
+                <div class="site_number">
+                    Contact Number: 0132-XXXXXXX
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header top -->
+
     <!-- header -->
     <header class="header_section sticky-top py-2">
         <div class="navbar-area">
@@ -25,6 +47,12 @@
                     <nav class="navbar navbar-expand-lg p-0 navbar-light position-relative">
 
                         <div class="d-flex align-items-center justify-content-between w-100">
+
+                            <button class="mdiv navbar-toggler text-start w-100 border-0 shadow-none d-lg-none border-0"
+                                type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
+                                aria-controls="mobileMenu" aria-label="Toggle navigation">
+                                <i class="fa fa-list text-white"></i>
+                            </button>
 
                             <a class="mdiv navbar-brand p-0 m-0 justify-content-center mr-2" href="index.html">
                                 <img src="assets/images/logo.png" alt="logo">
@@ -91,11 +119,7 @@
                             <!-- Cart & Wishlist icons always visible, even on mobile -->
                             <div
                                 class="mdiv others-option d-flex align-items-center justify-content-end w-100 ms-md-auto">
-                                <button class="mdiv navbar-toggler border-0 shadow-none d-lg-none border-0"
-                                    type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
-                                    aria-controls="mobileMenu" aria-label="Toggle navigation">
-                                    <i class="fa fa-list text-white"></i>
-                                </button>
+
                                 <div class="dropdown user_dropdown me-2 me-xl-4">
 
                                     <button class="bg-transparent border-0 d-flex align-items-center" type="button"
@@ -208,79 +232,75 @@
         <div class="container">
             <div class="row  g-lg-5">
                 <div class="col-lg-6 mb-4 mb-lg-0">
+                    <!-- gallery -->
                     <div class="products-details-image position-relative">
+                        <div class="pro_tag discount">
+                            5%
+                        </div>
                         <div class="mb-4">
                             <!-- Main gallery -->
-                            <div class="swiper productGallery text-center">
+                            <div
+                                class="swiper productGallery d-flex align-items-center justify-content-center text-center">
                                 <div class="swiper-wrapper text-center">
 
                                     <div class="swiper-slide">
                                         <a href="assets/images/products/7.webp" class="popup-link w-100">
-                                            <img class="w-100 rounded" src="assets/images/products/7.webp"
-                                                alt="Product Name">
+                                            <img class="w-100" src="assets/images/products/7.webp" alt="Product Name">
                                         </a>
                                     </div>
 
                                     <div class="swiper-slide">
                                         <a href="assets/images/products/8.webp" class="popup-link">
-                                            <img class="w-100 rounded" src="assets/images/products/8.webp"
-                                                alt="Product Name">
+                                            <img class="w-100" src="assets/images/products/8.webp" alt="Product Name">
                                         </a>
                                     </div>
 
                                     <div class="swiper-slide">
                                         <a href="assets/images/products/9.webp" class="popup-link">
-                                            <img class="w-100 rounded" src="assets/images/products/9.webp"
-                                                alt="Product Name">
+                                            <img class="w-100" src="assets/images/products/9.webp" alt="Product Name">
                                         </a>
                                     </div>
 
                                     <div class="swiper-slide">
                                         <a href="assets/images/products/10.webp" class="popup-link w-100">
-                                            <img class="w-100 rounded" src="assets/images/products/10.webp"
-                                                alt="Product Name">
+                                            <img class="w-100" src="assets/images/products/10.webp" alt="Product Name">
                                         </a>
                                     </div>
 
                                     <div class="swiper-slide">
                                         <a href="assets/images/products/11.webp" class="popup-link">
-                                            <img class="w-100 rounded" src="assets/images/products/11.webp"
-                                                alt="Product Name">
+                                            <img class="w-100" src="assets/images/products/11.webp" alt="Product Name">
                                         </a>
                                     </div>
 
+
                                     <div class="swiper-slide">
                                         <a href="assets/images/products/12.webp" class="popup-link">
-                                            <img class="w-100 rounded" src="assets/images/products/12.webp"
-                                                alt="Product Name">
+                                            <img class="w-100" src="assets/images/products/12.webp" alt="Product Name">
                                         </a>
                                     </div>
 
                                     <div class="swiper-slide">
                                         <a href="assets/images/products/13.webp" class="popup-link">
-                                            <img class="w-100 rounded" src="assets/images/products/13.webp"
-                                                alt="Product Name">
+                                            <img class="w-100" src="assets/images/products/13.webp" alt="Product Name">
                                         </a>
                                     </div>
 
                                     <div class="swiper-slide">
                                         <a href="assets/images/products/11.webp" class="popup-link">
-                                            <img class="w-100 rounded" src="assets/images/products/11.webp"
-                                                alt="Product Name">
+                                            <img class="w-100" src="assets/images/products/11.webp" alt="Product Name">
                                         </a>
                                     </div>
 
                                     <div class="swiper-slide">
                                         <a href="assets/images/products/12.webp" class="popup-link">
-                                            <img class="w-100 rounded" src="assets/images/products/12.webp"
-                                                alt="Product Name">
+                                            <img class="w-100" src="assets/images/products/12.webp" alt="Product Name">
                                         </a>
                                     </div>
 
                                     <div class="swiper-slide">
                                         <a href="assets/images/products/13.webp" class="popup-link">
-                                            <img class="w-100 rounded" src="assets/images/products/13.webp"
-                                                alt="Product Name">
+                                            <img class="w-100" src="assets/images/products/13.webp" alt="Product Name">
                                         </a>
                                     </div>
 
@@ -321,6 +341,7 @@
                                             alt="Product Name">
                                     </div>
 
+
                                     <div class="swiper-slide">
                                         <img src="assets/images/products/12.webp" class="img-fluid rounded"
                                             alt="Product Name">
@@ -346,159 +367,19 @@
                             </div>
                         </div>
                     </div>
-
-
-                    <div class="product_details mb-4">
-                        <h4 class="fs-5 fw-bold mb-3">Product details</h4>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit aspernatur libero suscipit
-                            hic, temporibus, eos natus rerum dolores accusantium ratione vel. Laborum, corrupti? Esse
-                            rem, doloribus quae placeat reprehenderit dolorem quas omnis explicabo ducimus aspernatur,
-                            deleniti, voluptates dicta eveniet odit!
-                        </p>
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci corporis nulla error et
-                            temporibus doloremque mollitia iusto nihil perspiciatis ea, sapiente impedit esse aut
-                            repudiandae neque sit, ut cum eveniet! Doloremque corporis facere, tempora culpa nihil saepe
-                            corrupti accusantium blanditiis laboriosam? Aspernatur facere veniam minus architecto.
-                            Quidem repellendus autem nam.
-                        </p>
-                    </div>
-
-                    <div class="reviews">
-                        <h4 class="fs-5 fw-bold mb-3">Product Reviews</h4>
-                        <div class="row align-items-center mb-4">
-                            <div class="col-md-4 text-center">
-                                <h3>0</h3>
-                                <div class="star-rating fs-4">
-                                    <div class="star-rating">
-                                        <i class="fa-regular fa-star text-muted"></i>
-                                        <i class="fa-regular fa-star text-muted"></i>
-                                        <i class="fa-regular fa-star text-muted"></i>
-                                        <i class="fa-regular fa-star text-muted"></i>
-                                        <i class="fa-regular fa-star text-muted"></i>
-                                    </div>
-
-                                </div>
-                                <p class="review-stats mt-2">
-                                    Based on 0 reviews
-                                </p>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="d-flex align-items-center mb-2">
-                                    <span class="me-2">5 Star</span>
-                                    <div class="progress flex-grow-1">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 0%"
-                                            aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <span class="ms-2">0</span>
-                                </div>
-                                <div class="d-flex align-items-center mb-2">
-                                    <span class="me-2">4 Star</span>
-                                    <div class="progress flex-grow-1">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 0%"
-                                            aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <span class="ms-2">0</span>
-                                </div>
-                                <div class="d-flex align-items-center mb-2">
-                                    <span class="me-2">3 Star</span>
-                                    <div class="progress flex-grow-1">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 0%"
-                                            aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <span class="ms-2">0</span>
-                                </div>
-                                <div class="d-flex align-items-center mb-2">
-                                    <span class="me-2">2 Star</span>
-                                    <div class="progress flex-grow-1">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 0%"
-                                            aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <span class="ms-2">0</span>
-                                </div>
-                                <div class="d-flex align-items-center mb-2">
-                                    <span class="me-2">1 Star</span>
-                                    <div class="progress flex-grow-1">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 0%"
-                                            aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <span class="ms-2">0</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="review-card pb-3 mb-3 border-bottom border-light">
-                        <div class="review-header mb-3">
-                            <img src="https://ecom.nexcoreit4u.com/no-image.png" alt="" class="rounded-pill img-fluid"
-                                width="40">
-                            <div>
-                                <h5 class="mb-1">
-                                    Rana
-                                    <span class="review-date m-0">
-                                        |
-                                        October 14, 2025
-                                    </span>
-                                </h5>
-                                <div class="star-rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-
-                                </div>
-                            </div>
-                        </div>
-                        <p class="mt-1 prd_review">Absolutely love this bag! The leather feels premium, and the
-                            stitching is very
-                            well done. It’s spacious enough for my essentials and looks stylish with every outfit.
-                            Definitely worth the price!
-                        </p>
-                    </div>
-                    <div class="review-card pb-3 mb-3 border-bottom border-light">
-                        <div class="review-header mb-3">
-                            <img src="https://ecom.nexcoreit4u.com/no-image.png" alt="" class="rounded-pill img-fluid"
-                                width="40">
-                            <div>
-                                <h5 class="mb-1">
-                                    John Doe
-                                    <span class="review-date m-0">
-                                        |
-                                        October 14, 2025
-                                    </span>
-                                </h5>
-                                <div class="star-rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-
-                                </div>
-                            </div>
-                        </div>
-                        <p class="mt-1 prd_review">Absolutely love this bag! The leather feels premium, and the
-                            stitching is very
-                            well done. It’s spacious enough for my essentials and looks stylish with every outfit.
-                            Definitely worth the price!
-                        </p>
-                    </div>
-
-                    <div class="text-center">
-                        <button type="button" class="secondary-btn px-5 rounded-pill shadow-sm" data-bs-toggle="modal"
-                            data-bs-target="#reviewModal">See all Reviews</button>
-                    </div>
                 </div>
 
+                <!-- product info -->
                 <div class="col-lg-6 order-lg-2">
                     <div class="products-details-desc sticky-top product-item" style="top:1rem;">
                         <h1 class="mb-3">Awesome Product Name</h1>
+                        <p>
+                            <i class="fa fa-eye"></i>
+                            <span id="watching-count" class="text-success">1 people watching </span>
+                        </p>
                         <div class="pro_price mb-1">
-                            <del>$120</del>
-                            <span>$90</span>
+                            <del>TK 120</del>
+                            <span>TK 90</span>
                         </div>
 
                         <ul class="products-info mb-2">
@@ -519,11 +400,7 @@
                         <div class="short_desc">
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum laudantium aliquid
-                                cupiditate, repudiandae ut culpa nihil eligendi iste placeat praesentium, quos fugiat
-                                quibusdam fuga delectus nulla optio eos dolorem enim sunt excepturi molestiae. Magni
-                                eveniet facere aut commodi consectetur quibusdam molestiae minus magnam, quo ipsam, nam
-                                voluptas quia iste architecto impedit earum blanditiis placeat dolorum autem ex! Labore,
-                                illum sunt!
+                                cupiditate, repudiandae ut culpa nihil eligendi iste place....!
                             </p>
                         </div>
 
@@ -572,12 +449,16 @@
                             </div>
                         </div>
 
+                        <p class="mb-1 fw-semibold">Stock: <span class="text-success">100 items</span></p>
+
+
                         <!-- qty -->
                         <div class="products-add-to-cart mb-3 mt-4">
                             <div class="d-flex align-items-center">
                                 <span class="me-2">Qty</span>
                                 <select name="quantity" id="quantity" class="form-control form-select"
                                     style="width:100px; height:50px;">
+                                    <!-- Please Write 1 to 100 data in all qty -->
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -587,27 +468,195 @@
                                     <option value="7">7</option>
                                     <option value="8">8</option>
                                     <option value="9">9</option>
-                                    <option value="10">10</option>
+                                    <option value="100">100</option>
                                 </select>
                             </div>
                         </div>
-                        <button type="button"
-                            class="primary-btn rounded-pill w-75 add-to-cart-btn add-to-cart-btn-details">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round" data-lucide="shopping-cart"
-                                class="lucide lucide-shopping-cart me-1">
-                                <circle cx="8" cy="21" r="1"></circle>
-                                <circle cx="19" cy="21" r="1"></circle>
-                                <path
-                                    d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12">
-                                </path>
-                            </svg>
 
-                            Add to Cart
-                        </button>
+                        <div class="row">
+                            <div class="col-6">
+                                <button type="button"
+                                    class="primary-btn rounded-pill w-100 add-to-cart-btn add-to-cart-btn-details">
+                                    Add to Cart
+                                </button>
+
+                            </div>
+                            <div class="col-6">
+                                <button type="button"
+                                    class="secondary-btn rounded-pill w-100 add-to-cart-btn add-to-cart-btn-details">
+                                    Buy Now
+                                </button>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <button type="button"
+                                    class="primary-btn rounded-pill w-100 add-to-cart-btn add-to-cart-btn-details">
+                                    Whatsapp
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Static Shipping Info -->
+                        <div class="col-12 mt-3">
+                            <div class="">
+                                <h6 class="mb-2 fw-bold">Shipping Charge</h6>
+                                <p class="mb-0 small">Inside Dhaka: <strong>TK 100</strong></p>
+                                <p class="mb-0 small">Outside Dhaka: <strong>TK 150</strong></p>
+                            </div>
+                        </div>
 
                     </div>
+                </div>
+
+            </div>
+
+            <!-- details -->
+            <div class="mt-4">
+                <div class="product_details mb-4">
+                    <h4 class="fs-5 fw-bold mb-3">Product details</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit aspernatur libero
+                        suscipit
+                        hic, temporibus, eos natus rerum dolores accusantium ratione vel. Laborum, corrupti?
+                        Esse
+                        rem, doloribus quae placeat reprehenderit dolorem quas omnis explicabo ducimus
+                        aspernatur,
+                        deleniti, voluptates dicta eveniet odit!
+                    </p>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci corporis nulla error
+                        et
+                        temporibus doloremque mollitia iusto nihil perspiciatis ea, sapiente impedit esse aut
+                        repudiandae neque sit, ut cum eveniet! Doloremque corporis facere, tempora culpa nihil
+                        saepe
+                        corrupti accusantium blanditiis laboriosam? Aspernatur facere veniam minus architecto.
+                        Quidem repellendus autem nam.
+                    </p>
+                </div>
+
+                <!-- review -->
+                <div class="reviews">
+                    <h4 class="fs-5 fw-bold mb-3">Product Reviews</h4>
+                    <div class="row align-items-center mb-4">
+                        <div class="col-md-6 col-xl-4 text-center">
+                            <h3>0</h3>
+                            <div class="star-rating fs-4">
+                                <div class="star-rating">
+                                    <i class="fa-regular fa-star text-muted"></i>
+                                    <i class="fa-regular fa-star text-muted"></i>
+                                    <i class="fa-regular fa-star text-muted"></i>
+                                    <i class="fa-regular fa-star text-muted"></i>
+                                    <i class="fa-regular fa-star text-muted"></i>
+                                </div>
+
+                            </div>
+                            <p class="review-stats mt-2">
+                                Based on 0 reviews
+                            </p>
+                        </div>
+                        <div class="col-md-6 col-xl-5">
+                            <div class="d-flex align-items-center mb-2">
+                                <span class="me-2">5 Star</span>
+                                <div class="progress flex-grow-1">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 0%"
+                                        aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <span class="ms-2">0</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <span class="me-2">4 Star</span>
+                                <div class="progress flex-grow-1">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 0%"
+                                        aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <span class="ms-2">0</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <span class="me-2">3 Star</span>
+                                <div class="progress flex-grow-1">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 0%"
+                                        aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <span class="ms-2">0</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <span class="me-2">2 Star</span>
+                                <div class="progress flex-grow-1">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 0%"
+                                        aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <span class="ms-2">0</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <span class="me-2">1 Star</span>
+                                <div class="progress flex-grow-1">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 0%"
+                                        aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <span class="ms-2">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card pb-3 mb-3 border-bottom border-light">
+                    <div class="review-header mb-3">
+                        <img src="https://ecom.nexcoreit4u.com/no-image.png" alt="" class="rounded-pill img-fluid"
+                            width="40">
+                        <div>
+                            <h5 class="mb-1">
+                                Rana
+                                <span class="review-date m-0">
+                                    |
+                                    October 14, 2025
+                                </span>
+                            </h5>
+                            <div class="star-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mt-1 prd_review">Absolutely love this bag! The leather feels premium, and the
+                        stitching is very
+                        well done. It’s spacious enough for my essentials and looks stylish with every outfit.
+                        Definitely worth the price!
+                    </p>
+                </div>
+                <div class="review-card pb-3 mb-3 border-bottom border-light">
+                    <div class="review-header mb-3">
+                        <img src="https://ecom.nexcoreit4u.com/no-image.png" alt="" class="rounded-pill img-fluid"
+                            width="40">
+                        <div>
+                            <h5 class="mb-1">
+                                John Doe
+                                <span class="review-date m-0">
+                                    |
+                                    October 14, 2025
+                                </span>
+                            </h5>
+                            <div class="star-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+
+                            </div>
+                        </div>
+                    </div>
+                    <p class="mt-1 prd_review">Absolutely love this bag! The leather feels premium, and the
+                        stitching is very
+                        well done. It’s spacious enough for my essentials and looks stylish with every outfit.
+                        Definitely worth the price!
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <button type="button" class="secondary-btn px-5 rounded-pill shadow-sm" data-bs-toggle="modal"
+                        data-bs-target="#reviewModal">See all Reviews</button>
                 </div>
             </div>
         </div>
@@ -1273,6 +1322,8 @@
                 type: 'iframe'
             });
         });
+
+
 
     </script>
 

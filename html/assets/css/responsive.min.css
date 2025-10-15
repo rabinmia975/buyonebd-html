@@ -28,12 +28,6 @@
         font-size: 14px;
         justify-content: start;
     }
-}
-
-@media screen and (max-width:575px) {
-    .section-title h3 {
-        font-size: 18px !important;
-    }
 
     .search_option {
         position: absolute;
@@ -45,6 +39,19 @@
     .header_section {
         padding: 15px 0px 60px 0px !important;
     }
+}
+
+
+@media screen and (max-width:575px) {
+    .section-title h3 {
+        font-size: 18px !important;
+    }
+
+    .carousel-item img {
+        min-height: 150px; 
+    }
+
+
 
 
 }

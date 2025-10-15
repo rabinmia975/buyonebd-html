@@ -26,7 +26,7 @@ body {
 }
 
 :root {
-    --primary: #fb7701;
+    --primary: oklch(62.7% 0.194 149.214);
     --secondary: #212121;
 }
 
@@ -86,11 +86,18 @@ body {
 }
 
 /* ========================= Header ============================== */
+.header-top {
+    background: #006e29;
+    color: #fff;
+    font-size: 14px;
+    padding: 5px 0px;
+}
+
 
 .header_section {
-    border-top-color: #2A0000;
-    border-bottom-color: #2A0000;
-    background-color: #2A0000;
+    border-top-color: var(--primary);
+    border-bottom-color: var(--primary);
+    background-color: var(--primary);
 }
 
 .header_section .navbar-nav .nav-item a {
@@ -111,6 +118,7 @@ body {
     padding: 20px 12px;
     z-index: 2;
 }
+
 
 .header_section .navbar-nav .nav-item a:hover:after {
     opacity: 1;
@@ -138,7 +146,7 @@ body {
     border-radius: 50px;
     max-width: 100%;
     padding: 18px 12px;
-    background-color: #4C0000;
+    background-color: #098638;
     transition: all 0.2s ease;
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
@@ -146,6 +154,32 @@ body {
     -o-transition: all 0.2s ease;
 }
 
+.slider_sec .small-arrow {
+    width: 40px;
+    height: 40px;
+    background: #ffffff;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    z-index: 1;
+    opacity: 1;
+    margin: 0px 10px;
+}
+
+
+.slider_sec .small-arrow i {
+    color: var(--primary);
+    font-size: 12px;
+}
+
+.slider_sec .small-arrow:hover {
+    background-color: #f1f1f1;
+}
 
 .ecom-nav .option-item svg {
     width: 22px;
@@ -183,7 +217,7 @@ body {
 
 .search_option .input-group-text {
     width: 36px;
-    background: #000000;
+    background: #386800;
     height: 36px;
     border: none !important;
     color: #ffffff;
@@ -458,9 +492,8 @@ body {
     padding-top: 20px;
 }
 
-.social_media ul {
-    display: flex;
-    justify-content: space-between;
+.social_media ul li {
+    display: inline-flex;
 }
 
 .social_media ul li a {
@@ -474,6 +507,7 @@ body {
     align-items: center;
     border-radius: 6px;
     transition: all 0.3s ease;
+    margin: 5px;
 }
 
 .social_media ul li a:hover {
@@ -870,4 +904,20 @@ div#rateYo {
 
 .mobile_nav .home span {
     color: #fff;
+}
+
+.pro_tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #0d6efd;
+    padding: 2px 10px;
+    border-radius: 50px;
+    font-size: 13px;
+    color: #fff;
+    z-index: 2;
+}
+
+.pro_tag.discount {
+    background: #FF5722;
 }
