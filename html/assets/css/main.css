@@ -497,6 +497,7 @@ body {
     align-items: center;
     -webkit-align-items: center;
     flex-direction: column;
+    z-index: 99;
 }
 
 
@@ -773,3 +774,100 @@ div#rateYo {
     color: var(--bg-dark);
 }
 
+
+.shoppingModal .modal-content .modal-body {
+    padding: 25px 15px;
+}
+
+.shoppingModal .modal-content {
+    border-radius: 0;
+    border: none;
+}
+
+.shoppingModal.modal.right.fade.show .modal-dialog {
+    right: 0;
+}
+
+.shoppingModal.modal.right.fade .modal-dialog {
+    right: -420px;
+    transition: 0.3s linear, right 0.3s ease-out;
+}
+
+.shoppingModal.modal.right .modal-dialog {
+    position: fixed;
+    margin: auto;
+    max-width: 250px;
+    width: 100%;
+    height: 100%;
+    transform: translate3d(0%, 0, 0);
+}
+
+.shoppingModal .close {
+    color: var(--secondary);
+    transition: 0.2s;
+    position: absolute;
+    top: 11px;
+    z-index: 1;
+    background-color: transparent;
+    border: none;
+    right: 10px;
+}
+
+.shoppingModal .price {
+    color: var(--primary);
+    font-size: 14px;
+}
+
+.shoppingModal .form-control {
+    font-size: 13px;
+    padding: 6px 12px;
+    max-width: 100px;
+}
+
+.shoppingModal .cart_item {
+    height: 574px;
+    overflow: hidden;
+    flex: 1;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-left: 2px;
+    scrollbar-width: thin;
+    scrollbar-color: #aaa transparent;
+}
+
+.mobile_nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.mobile_nav a {
+    width: 20%;
+}
+
+.mobile_nav span {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--secondary);
+}
+
+.mobile_nav .home {
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    width: 70px;
+    height: 70px;
+    background: var(--primary);
+    color: #fff !important;
+    margin-top: -32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.mobile_nav .home span {
+    color: #fff;
+}
