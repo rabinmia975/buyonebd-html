@@ -1,12 +1,15 @@
 @media (max-width: 1399px) {
     .search_option .form-control {
-        width: 400px !important;
+        width: 270px !important;
     }
 }
 
 @media (max-width: 1199px) {
     .search_option .form-control {
         width: 260px !important;
+    }
+    .header_section .navbar-nav .nav-item a{
+        padding:20px 7px;
     }
 }
 
@@ -31,7 +34,7 @@
 
     .search_option {
         position: absolute;
-        top: 57px;
+        top: 67px;
         left: 0;
         right: 0;
     }
@@ -48,10 +51,19 @@
     }
 
     .carousel-item img {
-        min-height: 150px; 
+        min-height: 150px;
     }
 
+}
 
 
+@media screen and (max-width:450px) {
+    .navbar-brand img {
+        max-width: 136px;
+        max-height: 60px;
+    }
 
+    .search_option {
+        top: 48px;
+    }
 }

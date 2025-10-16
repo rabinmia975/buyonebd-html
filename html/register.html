@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BuyoneBD Ecom</title>
 
+    <link rel="icon" href="assets/images/fav.jpeg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -46,10 +47,10 @@
 
                         <div class="d-flex align-items-center justify-content-between w-100">
 
-                            <button class="mdiv navbar-toggler text-start w-100 border-0 shadow-none d-lg-none border-0"
+                            <button class="mdiv navbar-toggler text-start border-0 shadow-none d-lg-none border-0"
                                 type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
                                 aria-controls="mobileMenu" aria-label="Toggle navigation">
-                                <i class="fa fa-list text-white"></i>
+                                <i class="fa fa-bars text-white"></i>
                             </button>
 
                             <a class="mdiv navbar-brand p-0 m-0 justify-content-center mr-2" href="index.html">
@@ -78,7 +79,7 @@
                                 </div>
 
                                 <div class="offcanvas-body">
-                                    <ul class="navbar-nav ms-lg-4">
+                                    <ul class="navbar-nav ms-sm-2 ms-xl-4">
                                         <li class="nav-item">
                                             <a href="shop.html" class="nav-link">
                                                 <i class="pe-1 fa fa-thumbs-up"></i>
@@ -101,7 +102,7 @@
                                 </div>
                             </div>
 
-                            <div class="search_option ms-sm-3 ">
+                            <div class="search_option me-sm-3 ">
                                 <form action="#" method="get">
                                     <div class="input-group">
                                         <input type="text" name="search" id="search" class="form-control"
@@ -115,34 +116,19 @@
 
 
                             <!-- Cart & Wishlist icons always visible, even on mobile -->
-                            <div
-                                class="mdiv others-option d-flex align-items-center justify-content-end w-100 ms-md-auto">
+                            <div class="mdiv others-option d-flex align-items-center justify-content-lg-end ms-lg-auto">
 
-                                <div class="dropdown user_dropdown me-2 me-xl-4">
-
-                                    <button class="bg-transparent border-0 d-flex align-items-center" type="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="user_dropdown me-2 me-xl-4">
+                                    <a href="login.html"
+                                        class="bg-transparent text-white border-0 d-flex align-items-center"
+                                        style="font-size: 12px;">
                                         <img src="assets/images/user.png" width="30" height="30"
                                             class="rounded-pill me-1" alt="">
-                                        <div class="text-start d-none d-lg-block">
-                                            Hello, John Doe <br>
+                                        <div class="text-start d-none d-xl-block">
+                                            Sign In / Register <br>
                                             <strong>Orders & Account</strong>
                                         </div>
-                                    </button>
-
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a class="dropdown-item" href="#"><i class="fa fa-list"></i> Your Orders</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Your
-                                                Profile</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="#"><i
-                                                    class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out</a>
-                                        </li>
-                                    </ul>
+                                    </a>
                                 </div>
 
                                 <div class="option-item">
@@ -161,7 +147,9 @@
                                         </a>
                                     </div>
                                 </div>
+
                             </div>
+
                         </div>
 
                     </nav>
@@ -439,29 +427,7 @@
         });
 
 
-        // whatsapp
-        (function () {
-            let options = {
-                contactform: false,
-                whatsapp: '01320325852',
-                call_to_action: "Message us",
-                button_color: "#FF6550",
-                position: "right",
-                order: "contactform,whatsapp",
-            };
-            let proto = 'https:',
-                host = "getbutton.io",
-                url = proto + '//static.' + host;
-            let s = document.createElement('script');
-            s.type = 'text/javascript';
-            s.async = true;
-            s.src = url + '/widget-send-button/js/init.js';
-            s.onload = function () {
-                WhWidgetSendButton.init(host, proto, options);
-            };
-            let x = document.getElementsByTagName('script')[0];
-            x.parentNode.insertBefore(s, x);
-        })();
+
 
     </script>
 
