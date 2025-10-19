@@ -85,7 +85,13 @@ body {
     color: #c8c8c8;
 }
 
+.sticky-top {
+    z-index: 999999;
+}
+
 /* ========================= Header ============================== */
+
+
 .header-top {
     background: #006e29;
     color: #fff;
@@ -100,9 +106,8 @@ body {
 }
 
 .header_section {
-    border-top-color: var(--primary);
-    border-bottom-color: var(--primary);
-    background-color: var(--primary);
+    background-color: #fff;
+    border: 1px solid #ddd;
 }
 
 .header_section .navbar-nav .nav-item .nav-link {
@@ -115,7 +120,7 @@ body {
     height: .44rem !important;
     font-size: 13px;
     font-weight: 500;
-    color: #fff;
+    color: #000;
     white-space: nowrap;
     cursor: pointer;
     border-radius: .22rem;
@@ -159,6 +164,10 @@ body {
     -o-transition: all 0.2s ease;
 }
 
+.header_section .navbar-nav .nav-item .nav-link:hover {
+    color: #fff !important;
+}
+
 .header_section .dropdown-item {
     font-size: 14px;
     color: #575757 !important;
@@ -198,7 +207,7 @@ body {
 .ecom-nav .option-item svg {
     width: 22px;
     height: 22px;
-    color: #ffffff;
+    color: #000;
 }
 
 .ecom-nav .navbar .others-option .option-item a span {
@@ -206,7 +215,7 @@ body {
     right: -13px;
     top: -4px;
     text-align: center;
-    color: #fff;
+    color: #000;
     font-size: 12px;
     font-weight: 600;
     border-radius: 50px;
@@ -215,13 +224,14 @@ body {
     padding: 0px 4px;
 }
 
+
 .user_dropdown button {
     font-size: 12px;
     color: #fff;
 }
 
 .search_option .form-control {
-    border: none;
+    border: 1px solid #ddd;
     border-radius: 50px !important;
     height: 40px;
     width: 420px;
@@ -231,7 +241,7 @@ body {
 
 .search_option .input-group-text {
     width: 36px;
-    background: #386800;
+    background: #000;
     height: 36px;
     border: none !important;
     color: #ffffff;
@@ -242,6 +252,25 @@ body {
     border-radius: 50px !important;
     z-index: 5;
 }
+
+
+
+/* Carousel dot indicators */
+.slider_sec .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    margin: 0 3px;
+    transition: all 0.3s ease;
+}
+
+/* Active dot */
+.slider_sec .carousel-indicators .active {
+    background-color: #ffffff;
+}
+
 
 .section-title h3 {
     font-size: 24px;
@@ -534,7 +563,7 @@ body {
     right: 0;
     left: unset;
     bottom: 76px;
-    width: 76px;
+    width: 56px;
     background: #fff;
     box-shadow: 0 0 12px 0 rgba(0, 0, 0, .1);
     border-radius: 10px 0 0 10px;
@@ -551,8 +580,7 @@ body {
 #mainToolbar .scrolltop,
 #mainToolbar .whatsapp {
     background: transparent;
-    margin: 6px;
-    margin-right: 2px;
+    margin: 4px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -563,7 +591,7 @@ body {
     line-height: .17rem;
     text-align: center;
     font-size: 11px;
-    gap: 4px;
+    gap: 3px;
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -571,8 +599,8 @@ body {
     -o-transition: all 0.3s ease;
     padding: 0;
     display: inline-block;
-    width: 65px !important;
-    height: 56px !important;
+    width: 50px !important;
+    height: 48px !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -585,6 +613,7 @@ body {
 
 #mainToolbar i {
     margin-bottom: 1px;
+    font-size: 16px;
 }
 
 /* shop details */
@@ -977,4 +1006,8 @@ div#rateYo {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.product_counter div {
+    width: 75px;
 }

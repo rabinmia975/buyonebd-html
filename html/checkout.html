@@ -51,7 +51,7 @@
                             <button class="mdiv navbar-toggler text-start border-0 shadow-none d-lg-none border-0"
                                 type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"
                                 aria-controls="mobileMenu" aria-label="Toggle navigation">
-                                <i class="fa fa-bars text-white"></i>
+                                <i class="fa fa-bars text-dark"></i>
                             </button>
 
                             <a class="mdiv navbar-brand p-0 m-0 justify-content-center mr-2" href="index.html">
@@ -178,7 +178,7 @@
 
                                 <div class="user_dropdown me-2 me-xl-4">
                                     <a href="login.html"
-                                        class="bg-transparent text-white border-0 d-flex align-items-center"
+                                        class="bg-transparent text-dark border-0 d-flex align-items-center"
                                         style="font-size: 12px;">
                                         <img src="assets/images/user.png" width="30" height="30"
                                             class="rounded-pill me-1" alt="">
@@ -213,48 +213,48 @@
                     </nav>
                 </div>
             </div>
-            <!-- mobile nav -->
-            <div class="mobile_nav d-block d-sm-none">
-                <nav class="navbar fixed-bottom bg-white border-top shadow-sm z-10">
-                    <div class="container">
-
-                        <div class="mobile_nav">
-                            <!-- Shop -->
-                            <a href="#" class="text-center text-dark">
-                                <i class="fa fa-list"></i>
-                                <span>Category</span>
-                            </a>
-
-                            <!-- Category -->
-                            <a href="shop.html" class="text-center text-dark">
-                                <i class="fa fa-shop"></i>
-                                <span>Shop</span>
-                            </a>
-
-                            <!-- Home -->
-                            <a href="index.html" class="text-center home text-dark">
-                                <i class="fa fa-home"></i>
-                                <span>Home</span>
-                            </a>
-
-                            <!-- Cart -->
-                            <a href="cart.html" class="text-center text-dark">
-                                <i class="fa fa-shopping-cart"></i>
-                                <span>Cart</span>
-                            </a>
-
-                            <!-- Whatsapp -->
-                            <a href="login.html" class="text-center text-dark">
-                                <i class="fa-solid fa-right-to-bracket"></i>
-                                <span>Login</span>
-                            </a>
-                        </div>
-
-                    </div>
-                </nav>
-            </div>
         </div>
     </header>
+    <!-- mobile nav -->
+    <div class="mobile_nav d-block d-sm-none">
+        <nav class="navbar fixed-bottom bg-white border-top shadow-sm z-10">
+            <div class="container">
+
+                <div class="mobile_nav">
+                    <!-- Shop -->
+                    <a href="#" class="text-center text-dark">
+                        <i class="fa fa-list"></i>
+                        <span>Category</span>
+                    </a>
+
+                    <!-- Category -->
+                    <a href="shop.html" class="text-center text-dark">
+                        <i class="fa fa-shop"></i>
+                        <span>Shop</span>
+                    </a>
+
+                    <!-- Home -->
+                    <a href="index.html" class="text-center home text-dark">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+
+                    <!-- Cart -->
+                    <a href="cart.html" class="text-center text-dark">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span>Cart</span>
+                    </a>
+
+                    <!-- Whatsapp -->
+                    <a href="login.html" class="text-center text-dark">
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                        <span>Login</span>
+                    </a>
+                </div>
+
+            </div>
+        </nav>
+    </div>
     <!-- header -->
 
 
@@ -278,7 +278,7 @@
             <form action="#" method="POST">
                 <div class="row gy-4">
                     <div class="col-lg-4 order-lg-2">
-                        <div class="cart_summary bg-light p-4 rounded sticky-top" style="top:2rem;">
+                        <div class="cart_summary bg-light p-4 rounded">
                             <div class="order-summary">
                                 <h6 class="fw-bold mb-4">Order Summary</h6>
 
@@ -356,6 +356,8 @@
                                 <!-- Payment Method -->
                                 <div class="col-12 mt-4">
                                     <h6 class="fw-bold mb-3">Payment Method</h6>
+
+                                    <!-- Cash on Delivery -->
                                     <div class="form-check mb-2">
                                         <input class="form-check-input" type="radio" name="payment_method" id="cod"
                                             value="cod" checked>
@@ -363,7 +365,26 @@
                                             Cash on Delivery
                                         </label>
                                     </div>
+
+                                    <!-- bKash -->
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="radio" name="payment_method" id="bkash"
+                                            value="bkash">
+                                        <label class="form-check-label d-flex align-items-center" for="bkash">
+                                            bKash Payment
+                                        </label>
+                                    </div>
+
+                                    <!-- Nagad -->
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="radio" name="payment_method" id="nagad"
+                                            value="nagad">
+                                        <label class="form-check-label d-flex align-items-center" for="nagad">
+                                            Nagad Payment
+                                        </label>
+                                    </div>
                                 </div>
+
 
                                 <!-- Order Notes -->
                                 <div class="col-12 mt-4">
@@ -478,7 +499,7 @@
     <div id="mainToolbar">
         <div class="whatsapp">
             <i class="fab fa-whatsapp"></i> <br>
-            <span>Whatsapp</span>
+            <span>Chat</span>
         </div>
         <div class="scrolltop" style="display: none;">
             <i class="fa fa-angle-up"></i> <br>
@@ -512,7 +533,28 @@
         });
 
 
+        // header sticky top
+        $(function () {
+            let lastScrollTop = 0;
+            const $header = $('.header_section');
 
+            $(window).on('scroll', function () {
+                let scrollTop = $(this).scrollTop();
+
+                // If scrolled more than 400px
+                if (scrollTop > 400) {
+                    if (scrollTop > lastScrollTop) {
+                        $header.removeClass('sticky-top').fadeOut(200);
+                    } else {
+                        $header.fadeIn().addClass('sticky-top');
+                    }
+                } else {
+                    $header.fadeIn().addClass('sticky-top');
+                }
+
+                lastScrollTop = scrollTop;
+            });
+        });
 
     </script>
 
